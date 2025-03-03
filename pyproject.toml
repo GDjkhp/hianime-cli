@@ -1,6 +1,6 @@
 [project]
-name = "mov-cli-hianime"
-description = "darkgamma hates hianime"
+name = "hianime-cli"
+description = "darkgamma hates weebs (and hianime)"
 authors = [
     {name = "GDjkhp", email = "jkhp.jkpa@gmail.com"}
 ]
@@ -40,8 +40,8 @@ dev = [
 ]
 
 [project.urls]
-GitHub = "https://github.com/mov-cli/example-plugin"
-BugTracker = "https://github.com/mov-cli/example-plugin/issues"
+GitHub = "https://github.com/GDjkhp/mov-cli-hianime"
+BugTracker = "https://github.com/GDjkhp/mov-cli-hianime/issues"
 
 [tool.setuptools.dynamic]
 version = { attr = "mov_cli_hianime.__version__" }
