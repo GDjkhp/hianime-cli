@@ -7,11 +7,12 @@ if TYPE_CHECKING:
 from .scraper import *
 
 plugin: PluginHookData = {
-    "version": 1, # plugin hook version
-    "package_name": "mov-cli-example", # pypi package name
+    "version": 1,
+    "package_name": "mov-cli-hianime",
     "scrapers": {
-        "DEFAULT": Example, 
+        "DEFAULT": HiAnimeScraper,
+        "hianime": HiAnimeScraper
     }
 }
 
-__version__ = "1.0.0"
+__version__ = "0.1.0"

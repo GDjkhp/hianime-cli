@@ -1,15 +1,18 @@
 [project]
-name = "mov-cli-example"
-description = "A mov-cli v4 plugin for watching whatever you desire. 🌟"
+name = "mov-cli-hianime"
+description = "darkgamma hates hianime"
 authors = [
-    {name = "Goldy", email = "goldy@devgoldy.xyz"} # Just an example, replace this with your name and email.
+    {name = "GDjkhp", email = "jkhp.jkpa@gmail.com"}
 ]
 readme = {file = "README.md", content-type = "text/markdown"}
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
 keywords = [
     "mov-cli",
-    "amazing plugin" # example
+    "aniwatch",
+    "hianime",
+    "anime",
+    "🐔👔"
 ]
 classifiers = [
     'Operating System :: Microsoft :: Windows :: Windows 11',
@@ -25,7 +28,6 @@ classifiers = [
 dependencies = [
     "requests",
     "importlib-metadata; python_version<'3.8'",
-
     "mov-cli>=4.3"
 ]
 
@@ -42,11 +44,11 @@ GitHub = "https://github.com/mov-cli/example-plugin"
 BugTracker = "https://github.com/mov-cli/example-plugin/issues"
 
 [tool.setuptools.dynamic]
-version = { attr = "mov_cli_example.__version__" }
+version = { attr = "mov_cli_hianime.__version__" }
 
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["mov_cli_example*"]
+include = ["mov_cli_hianime*"]
