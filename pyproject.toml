@@ -1,5 +1,5 @@
 [project]
-name = "hianime-cli"
+name = "MyAnimePlugin"
 description = "darkgamma hates weebs (and hianime)"
 authors = [
     {name = "GDjkhp", email = "jkhp.jkpa@gmail.com"}
@@ -11,6 +11,7 @@ keywords = [
     "mov-cli",
     "aniwatch",
     "hianime",
+    "animepahe",
     "anime",
     "🐔👔"
 ]
@@ -44,11 +45,11 @@ GitHub = "https://github.com/GDjkhp/mov-cli-hianime"
 BugTracker = "https://github.com/GDjkhp/mov-cli-hianime/issues"
 
 [tool.setuptools.dynamic]
-version = { attr = "mov_cli_hianime.__version__" }
+version = { attr = "myanimeplugin.__version__" }
 
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
-include = ["mov_cli_hianime*"]
+include = ["myanimeplugin*"]
