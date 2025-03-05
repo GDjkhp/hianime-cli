@@ -5,13 +5,15 @@ if TYPE_CHECKING:
     from mov_cli.plugins import PluginHookData
 
 from .hianime.scraper import *
+from .animepahe.scraper import *
 
 plugin: PluginHookData = {
     "version": 1,
     "package_name": "myanimeplugin",
     "scrapers": {
         "DEFAULT": HiAnimeScraper,
-        "hianime": HiAnimeScraper
+        "hianime": HiAnimeScraper,
+        "animepahe": AnimePaheScraper
     }
 }
 

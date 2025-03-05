@@ -2,7 +2,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from typing import Iterable, Optional, Dict, List
+    from typing import Iterable, Optional, Dict
 
     from mov_cli import Config
     from mov_cli.http_client import HTTPClient
@@ -31,8 +31,7 @@ class HiAnimeScraper(Scraper):
     def search(self, query: str, limit: int = None) -> Iterable[Metadata]:
         response = self._request(f"{self.search_url}?q={quote_plus(query)}")
         animes = response["data"]["animes"]
-        if limit is not None:
-            animes = animes[:limit]
+        if limit is not None: animes = animes[:limit]
         for anime in animes:
             yield Metadata(
                 id=anime["id"],
@@ -44,10 +43,8 @@ class HiAnimeScraper(Scraper):
         anime_details = self._request(f"{self.anime_url}/{metadata.id}/episodes")
         episodes = anime_details["data"]["episodes"]
         episode_map = {}
-        for ep in episodes:
-            episode_map[1] = ep["number"] # [season] = episode
-        if not episode_map:
-            return {None: 1}
+        episode_map[1] = len(episodes) # [season] = episodes
+        if not episode_map: return {None: 1}
         return episode_map
 
     def scrape(self, metadata: Metadata, episode: EpisodeSelector) -> Multi | Single:
